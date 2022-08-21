@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Research</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+    </style>
+    <script src=""></script>
+</head>
+<body>
+    <nav>  
+        <ul>  
+            <li><a href="index.html">Home</a></li>  
+            <li><a href="research.html">Research</a></li>  
+            <li><a href="projects.html">Projects</a></li>  
+            <li><a href="writing.html">Writing</a></li>  
+            <!--<li><a href="contact.html">Contact</a></li>-->
+        </ul>  
+    </nav>  
+    <h1>Research</h1>
+    <h2>Princeton Plasma Physics Lab</h2>
+        <h3>Magnetic Reconnection Visualization (June 2022 - August 2022)</h3>
+            <p>I wrote a Python script to create a 2D visualization of a 3D dataset showing magnetic field reconnection during a solar flare simulation. I was also familiarized with ParaView, and the process of using it to make 3D visualizations. The video generated is shown below.</p>
+            <center>
+                <video width="320" height="240" controls>
+                    <source src="anim.mov" type="video/mp4">
+                    <source src="anim.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+                </video> 
+                <h4>Movie visualization of xz-plane cross section; color correlates with plasma density.</h4>
+            </center>
+            <p>You may find the GitHub repo for this project <a target="_blank" href="https://github.com/alissasherbatov/reconnection">here</a>.</p>
+            <p><strong>Technologies used:</strong> multiprocessing, FFmpeg, vi, Python, Linux Terminal, SSH, Matplotlib, Numpy, h5py, TurboVNC, Cygwin, Visual Studio Code, Jupyter notebook, ParaView</p>
+        <br>
+        <h3>LSC Parallelization (February 2022 - May 2022)</h3>
+            <p>I worked on using OpenMP and Message Passing Interface (MPI) to parallelize the Lower Hybrid Simulation Code (LSC).</p>
+            <p><strong>Technologies used: </strong>OpenMP, MPI, Fortran, Linux Terminal, Visual Studio Code, C, vi, SSH</p>
+        <br>
+        <h3>TRANSP plotting project (September 2021 - January 2022)</h3>
+            <p>I wrote a Python code to plot experimental data from the DIII-D tokamak. This program is a newer version of an old Fortran program used by research scientists at PPPL to generate plots. In total, around 20 plots were created. A before-and-after of a plot is shown below.</p>
+            <center>
+                <img src="example_plot_TRANSP.png" alt="Python plot" style="width:30%">
+            <br>
+            <img src="fortran_plot_TRANSP.png" alt="Fortran plot" style="width:30%">
+            <h4>Top: Python plot. Bottom: Fortran plot.</h4>
+            </center>
+            <p><strong>Technologies used: </strong>Google Colab/Jupyter Notebook, Python, Fortran, Linux Terminal, CubicSpline, PdfPages, Matplotlib, Numpy, Scipy Interpolate</p>
+    <br>
+    <h2>NYU Agile Robotics and Perception Lab (ARPL)</h2>
+        <h3>Hololens 2 Drone Control (June 2021 - June 2022)</h3>
+            <p>In this project, I used the game engine Unity to allow humans to control robots with hand gestures. I did this by passing hand gesture data from the HoloLens 2, a mixed reality headset, to a Unity project. Then, in the Unity project, I used the XRLineRenderer package to create a trail outlining the trajectory, created an array of 3D position data, and sent samples of the trajectory data to Robot Operating System (ROS) as a Path Message. The project was then integrated into a pipeline already existing at ARPL to successfully communicate with real-life drones. Two videos of the final project are shown below.</p>
+            <center>
+                <video width="320" height="240" controls>
+                    <source src="hri-unity-project-external-view.mp4" type="video/mp4">
+                    <source src="hri-unity-project-external-view.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+                </video> 
+                <br>
+                <video width="320" height="240" controls>
+                    <source src="hri-project-headset-view_Trimmed.mp4" type="video/mp4">
+                    <source src="hri-project-headset-view_Trimmed.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+                </video> 
+                <h4>Top: view of me moving my hand to control the drone. Bottom: view of what I saw in the headset during the same moment.</h4>
+                
+            </center>
+            <p><strong>Technologies used: </strong>Mixed Reality Toolkit, Unity game engine, C#, Visual Studio, Mixed Reality Feature Tool, Hololens 2, Robot Operating System, Ubuntu</p>
+    <br>
+    <h2>NASA Texas Space Grant Consortium</h2>
+        <h3>Vegetation Recovery After the Camp Fire (May 2021 - October 2021)</h3>
+            <p>In this research, I formed a team to evaluate how the 2018 Camp Fire environmentally impacted land cover in California, and the extent to which the area's land cover suffered from long-term damage. Our hypothesis was that the affected land was damaged significantly, but recovered partially by the end of the investigated period. In order to assess the healing of a patch of land burnt in the Camp Fire, corrected reflectance images of the patch collected from NASA Worldview were analyzed using Python to return each image's Pixel Greenness Value (PGI)-an original metric developed by our team that analyzes an image’s color content to return a numerical value corresponding to vegetation health. These values were then plotted.</p>
+            <center>
+                <img src="camp_fire.png" alt="Camp fire" style="width:30%">
+            <h4>PGI value of burnt patch of land over the course of 26 weeks after the Camp Fire.</h4>
+            
+            </center>
+            <p>Over the course of 26 weeks after the Camp Fire, the patch of land partially regained its PGI. Major recovery occurred between weeks 7 and 15. We concluded that the area burnt in the Camp Fire only partially recovered, as the moving average of the PGI value only reached 81% of the baseline value by the end of the investigated period. Our findings demonstrate the environmental damage that wildfires can cause and the potential of PGI as a useful metric for assessing the impact of wildfires. Future studies could compare PGI results with those of the Normalized Difference Vegetation Index (NDVI), known for its usage in such vegetation recovery analyses. The case study could also repeat the experiment with Landsat data taken from the United States Geological Survey website, to account for the lack of atmospheric correction in NASA Worldview data.</p>
+            <p>This study is mentioned in the following <a target="_blank" href="https://www.globe.gov/web/mission-mosquito/overview/science-cafe-posts/-/blogs/a-sees-experience-6?_com_liferay_blogs_web_portlet_BlogsPortlet_redirect=https%3A%2F%2Fwww.globe.gov%3A443%2Fweb%2Fmission-mosquito%2Foverview%2Fscience-cafe-posts%3Fp_p_id%3Dcom_liferay_blogs_web_portlet_BlogsPortlet%26p_p_lifecycle%3D0%26p_p_state%3Dnormal%26p_p_mode%3Dview&_com_liferay_blogs_web_portlet_BlogsPortlet_redirectToLastFriendlyURL=false">article</a> I wrote for NASA's GLOBE Program blog.</p>
+            <p>This research study was presented at the 2021 American Geophysical Union Fall Meeting, and published as a preprint in the Earth and Space Science Open Archive (ESSOAR) under the DOI:</p>
+            <center><a target="_blank" href="https://doi.org/10.1002/essoar.10508247.1">https://doi.org/10.1002/essoar.10508247.1</a></center>
+            <p>Our research report has been published on the NASA GLOBE Program website. You may find it <a target="_blank" href="https://www.globe.gov/do-globe/research-resources/student-research-reports/-/projectdetail/10157/examining-environmental-and-structural-impact-of-extreme-events-on-land-cover">here</a>. The NASA GLOBE Program also mentions our project's appearance at conferences in <a target="_blank" href="https://observer.globe.gov/news-events-and-people/news/-/obsnewsdetail/19589576/globe-student-interns-recognized-for-agu-scientific-presentations">this</a> article.</p>
+            <p>Additionally, the study was presented with a live Q-and-A to over 600 people at the 2021 NASA STEM Enhancement in Earth Science Final Symposium, and won the "Data Scientist", "Make an Impact", and "Student Researcher" awards at the 2022 GLOBE International Virtual Science Symposium.</p>
+            <p><strong>Technologies used: </strong>Python, Google Colab, Excel, NASA Worldview, OpenCV2</p>
+    <br>
+    <h2>Kean University Group Science Scholars Research Program</h2>
+        <h3>COVID-19 Vaccination Rate Prediction by ZIP Code (July 2021)</h3>
+            <p>In this study, a neural network model using 26 features was developed and trained to predict the COVID-19 vaccination rate in various ZIP codes in Arizona. This model, which uses a total of 4 layers and 26 features, achieved over 90% accuracy at its best.</p>
+            <center>
+                <img src="error_hist.png" alt="error histogram" style="width:30%">
+            <h4><strong>Histogram of error in vaccination rate prediction.</strong></h4>
+            </center>
+            <p>The R<sup>2</sup> value, or coefficient of determination, of each factor was used to predict the vaccination rate of each ZIP code. When R<sup>2</sup>, a scientifically accepted measure of how accurately the variance of the independent variable explains that of the dependent variable, was used, the three factors most strongly correlated with vaccination rates were reported to be percentage of population with a bachelor's degree, SVI1 (the Social Vulnerability Index component corresponding with socioeconomic status), and median household income.</p>
+            <p>You may find my code at <a target="_blank" href="https://github.com/alissasherbatov/vaccAZ">this</a> GitHub repo.</p>
+            <p><strong>Technologies used: </strong>Python, Google Colab, Keras, PKL file, Numpy, Pandas, Matplotlib, seaborn, TensorFlow, scikit-learn, Ridge</p>
+    <br>
+    <h2>Bergen County Academies</h2>
+        <h3>Coral Reef-Monitoring Buoy System (October 2019 - March 2020)</h3>
+            <p>I spent my time at Bergen County Academies' Mechatronics Research Lab designing and prototyping an environmentally friendly buoy system to monitor coral reefs and investigate trends in coral bleaching. Photos of the final prototype are below:</p>
+            <center><img src="buoy_final.png" alt="Buoy prototype" style="width:30%">
+                <br>
+                <img src="buoy_prototype.png" alt="Buoy close up" style="width:30%">
+                <h4>Top: bird's eye view of buoy system. Bottom: close-up view of one buoy.</h4>
+                </center>
+            <p>The buoy system has three main functions: video surveillance, and temperature and turbidity measurement. It also is powered by small solar panels, making the device itself sustainably sourced.</p>
+            <p>In March 2020, the project was awarded the NOAA's "Taking the Pulse of the Planet" award at the 2020 Bergen County Academies Research Expo.</p>
+            <p><strong>Technologies used: </strong>Arduino, C</p>
+    <br>
+        <h3>The Fun Formula (December 2018 - June 2019)</h3>
+            <p>In my freshman year, I did a research project on roller coaster physics, attempting to find a general formula for the G-force of a roller coaster at a given point. Despite the constraints of having first-year physics knowledge and no calculus experience, the project was awarded the Engineering Medal at the 2019 Young Science Achievers' Program Symposium. You may view the original presentation below.</p>
+            <center>
+                <p><a target="_blank" href="The_Fun_Formula.pptx">The Fun Formula</a></p>
+            </center>
+            <p><strong>Technologies used: </strong>Force Vector Design, phone accelerometer data</p>
+    <br>
+    <center><a href="research.html">Back to top</a></center><a href="research.html">Back to top</a>
+    
+</body>
+</html> 
